@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraControl : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class CameraControl : MonoBehaviour
     public float lookSens;
     public float minX, maxX;
     private float curXRot;
+    
 
-   
+
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -21,7 +24,15 @@ public class CameraControl : MonoBehaviour
     {
         if(Cursor.lockState == CursorLockMode.Locked)
         {
-            Look();
+            if (SceneManager.GetActiveScene().buildIndex==1)
+            {
+                Look();
+            }
+            else if(SceneManager.GetActiveScene().buildIndex == 2 & Timer.instance.countdown < 0.5f)
+            {
+                Look();
+            }
+            
 
         }
         

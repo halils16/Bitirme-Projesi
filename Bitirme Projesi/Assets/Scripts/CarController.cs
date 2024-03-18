@@ -31,6 +31,9 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform arkaSolTransform;
     [SerializeField] private Transform arkaSagTransform;
 
+    [Header("Puan Sesi")]
+    public AudioSource pointSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,7 +44,7 @@ public class CarController : MonoBehaviour
     {
         if (Cursor.lockState == CursorLockMode.Locked & CarCharge.instance.sayac > 15)
         {
-            motorForce = 800;
+            motorForce = 1000;
             getUserInput();
             moveCar();
             rotateCar();
@@ -140,6 +143,7 @@ public class CarController : MonoBehaviour
     {
         if (other.CompareTag("Point"))
         {
+            pointSound.Play();
             Score.instance.UpdateScore();
             other.gameObject.SetActive(false);
         }

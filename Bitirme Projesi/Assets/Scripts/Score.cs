@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
     private void Start()
     {
         score = 0;
-        rekorText.text ="Rekor: "+ PlayerPrefs.GetFloat("RecordTime", 0.0f).ToString("F2");
+        rekorText.text ="Rekor: "+ PlayerPrefs.GetFloat("RecordTime", 0.0f).ToString("F2") + " sn.";
         
     }
 
@@ -47,13 +47,13 @@ public class Score : MonoBehaviour
         if (tamamlamaSuresi < enDusukSure)
         {
             enDusukSure = tamamlamaSuresi;
-            enDusukSureText.text = "Tamamladýðýn Süre: " + enDusukSure.ToString("F2"); //virgüleden sonra iki basamak yazmak için "F2" kullandýk
+            enDusukSureText.text = "Tamamlanan Süre: " + enDusukSure.ToString("F2") + " sn."; //virgüleden sonra iki basamak yazmak için "F2" kullandýk
 
             if (tamamlamaSuresi < PlayerPrefs.GetFloat("RecordTime", Mathf.Infinity))
             {
                 enDusukSure = tamamlamaSuresi;
                 PlayerPrefs.SetFloat("RecordTime", enDusukSure);
-                rekorText.text = "Rekor: " + enDusukSure.ToString("F2");
+                rekorText.text = "Rekor: " + enDusukSure.ToString("F2") + " sn.";
             }
         }
 
@@ -63,7 +63,7 @@ public class Score : MonoBehaviour
     public void ResetPP()
     {
         PlayerPrefs.DeleteKey("RecordTime");
-        rekorText.text = "Rekor: 0,00";
+        rekorText.text = "Rekor: 0,00 sn.";
     }
 
 }

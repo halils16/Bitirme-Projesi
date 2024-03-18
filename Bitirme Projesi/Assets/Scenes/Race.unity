@@ -3884,6 +3884,7 @@ GameObject:
   - component: {fileID: 329400445}
   - component: {fileID: 329400444}
   - component: {fileID: 329400443}
+  - component: {fileID: 329400451}
   m_Layer: 0
   m_Name: Free Racing Car
   m_TagString: Player
@@ -4146,6 +4147,7 @@ MonoBehaviour:
   onSagTransform: {fileID: 1765015680}
   arkaSolTransform: {fileID: 1440072921}
   arkaSagTransform: {fileID: 934781807}
+  pointSound: {fileID: 329400451}
 --- !u!65 &329400448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4193,6 +4195,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!82 &329400451
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329400442}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6555893856279990562, guid: 19d082e950dad7546989fd80af4e7b55, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 04562f8beb5c0fb419f90ae7c06dc25f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &339195528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8121123564845872179, guid: f5d3c5e0f5f32c141911c08deee9e94d, type: 3}
@@ -4622,8 +4720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -244.32, y: -237.7868}
-  m_SizeDelta: {x: 488.64, y: -475.5737}
+  m_AnchoredPosition: {x: -262.91132, y: -237.7868}
+  m_SizeDelta: {x: 525.8227, y: -475.5737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364213033
 MonoBehaviour:
@@ -8362,7 +8460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 328}
+  m_AnchoredPosition: {x: 0, y: 313.4}
   m_SizeDelta: {x: 207.5, y: 45.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &674131303
@@ -9309,7 +9407,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rekor: 0'
+  m_Text: 'Rekor: 0,00 sn.'
 --- !u!1 &756510036
 GameObject:
   m_ObjectHideFlags: 0
@@ -9859,7 +9957,7 @@ MonoBehaviour:
   timeRemaining: 0
   timeIsRunning: 1
   timeText: {fileID: 1249330468}
-  countdown: 3.8
+  countdown: 3.5
   countdownText: {fileID: 1566696182}
   GeriSayimEkrani: {fileID: 1781622017}
   ScorePanel: {fileID: 364213031}
@@ -11683,8 +11781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 744.38995, y: 366.97147}
-  m_SizeDelta: {x: -1561.6, y: -992.7406}
+  m_AnchoredPosition: {x: 744.38995, y: 366.17523}
+  m_SizeDelta: {x: -1561.6, y: -991.1481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880969251
 MonoBehaviour:
@@ -22489,6 +22587,7 @@ GameObject:
   - component: {fileID: 1781622018}
   - component: {fileID: 1781622020}
   - component: {fileID: 1781622019}
+  - component: {fileID: 1781622021}
   m_Layer: 5
   m_Name: GeriSayimEkrani
   m_TagString: Untagged
@@ -22555,6 +22654,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781622017}
   m_CullTransparentMesh: 1
+--- !u!82 &1781622021
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781622017}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6555893856279990562, guid: 19d082e950dad7546989fd80af4e7b55, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 08bd3a37b978f034997ba30d7ca00acb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1783363217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8121123564845872179, guid: f5d3c5e0f5f32c141911c08deee9e94d, type: 3}
@@ -26069,7 +26264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tamamlad\u0131\u011F\u0131n S\xFCre: 00,00"
+  m_Text: "Tamamlanan S\xFCre: 00,00 sn."
 --- !u!222 &2104736980
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26096,7 +26291,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 3.083252, y: -58.42627}
-  m_SizeDelta: {x: 494.2, y: 82}
+  m_SizeDelta: {x: 511.4, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2107691666
 PrefabInstance:
